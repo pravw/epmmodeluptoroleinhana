@@ -1,0 +1,110 @@
+###get the service document
+http://localhost:4004/odata/v4/catalogService
+
+### service metadata document
+http://localhost:4004/odata/v4/catalogService/$metadata
+
+
+
+#### to get the all the employee data
+http://localhost:4004/odata/v4/catalogService/EmployeeSet
+
+### to load the data by chunk by chunk
+
+http://localhost:4004/odata/v4/catalogService/EmployeeSet?$top=2
+
+
+### to load the data by salaryAmount ge filter record by using where condition.
+http://localhost:4004/odata/v4/catalogService/EmployeeSet?$filter=salaryAmount ge 100000
+
+
+### counting records
+
+http://localhost:4004/odata/v4/catalogService/EmployeeSet/$count
+
+
+
+###to get single record key
+
+http://localhost:4004/odata/v4/catalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C197A7FB
+
+### post - to create new employee
+post http://localhost:4004/odata/v4/catalogService/EmployeeSet
+Content-Type: application/json
+
+{
+
+  "nameFirst": "praveen",
+  "nameMiddle": "",
+  "nameLast": "M",
+  "nameInitials": null,
+  "sex": "M",
+  "language": "E",
+  "phoneNumber": null,
+  "email": "praveen@gmail.com",
+  "loginName": "praveen",
+  "Currency_code": "USD",
+  "salaryAmount": 150000,
+  "accountNumber": "9988776655",
+  "bankId": "121000358",
+  "bankName": "Sbi"
+}
+
+### get to read the single employee
+ GET http://localhost:4004/odata/v4/catalogService/EmployeeSet/fe48a312-e1df-49d7-995c-506cf12a15ec
+
+
+
+### patch to update employee data
+
+PATCH http://localhost:4004/odata/v4/catalogService/EmployeeSet/fe48a312-e1df-49d7-995c-506cf12a15ec
+Content-Type: application/json
+
+{
+"salaryAmount": 20000
+}
+
+### delete the employee data.
+
+DELETE  http://localhost:4004/odata/v4/catalogService/EmployeeSet/fe48a312-e1df-49d7-995c-506cf12a15ec
+
+
+
+
+
+
+
+
+
+
+
+### to get all pos
+http://localhost:4004/odata/v4/catalogService/POs
+
+
+### to get single pos
+http://localhost:4004/odata/v4/catalogService/POs/02BD2137-0890-1EEA-A6C2-BB55C1978999
+
+
+
+### to get po and its item data togrther.
+http://localhost:4004/odata/v4/catalogService/POs/02BD2137-0890-1EEA-A6C2-BB55C1978999
+
+### to get po and its item data together with assosiation.
+http://localhost:4004/odata/v4/catalogService/POs/02BD2137-0890-1EEA-A6C2-BB55C1978999?$expand=Items,PARTNER_GUID
+
+
+### calling the action
+post http://localhost:4004/odata/v4/CatalogService/POs/02BD2137-0890-1EEA-A6C2-BB55C1978999/boost
+Content-Type: application/json
+
+{}
+
+### calling the cap functions
+GET http://localhost:4004/odata/v4/CatalogService/POs/02BD2137-0890-1EEA-A6C2-BB55C1978999/largestOrder()
+
+
+
+### complete custom entity which has structure from db but own logic by our own handling
+
+GET http://localhost:4004/odata/v4/MyService/ReadEmployeeSrv

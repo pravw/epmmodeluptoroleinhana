@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+
+    {
+      "name": "nodepravencap debug",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}//app",
+      "runtimeExecutable": "cds",
+      "args": [
+        "serve",
+        "--with-mocks",
+        "--in-memory?"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "command":"cds watch"
+    }
+  ]
+}
