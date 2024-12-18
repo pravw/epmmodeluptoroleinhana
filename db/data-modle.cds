@@ -5,7 +5,7 @@ using { epmdb.commons as common } from './commons';
 
 context master {
     entity businesspartner {
-        key NODE_KEY: common.Guid;
+        key NODE_KEY: common.Guid @title :'{i18n>PARTER_GUID}';
         BP_ROLE: String(2);
         EMAIL_ADDRESS: String(105);
         PHONE_NUMBER: String(32);
