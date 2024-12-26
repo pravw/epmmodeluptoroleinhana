@@ -28,7 +28,7 @@ select from transaction.purchaseorder{
 };
 define view![ProductVH] as
     select from master.product{
-        @EndUserTExt.label:[
+        @EndUserText.label:[
             
             {
            language:'EN',
@@ -56,6 +56,8 @@ DESCRIPTION AS![ProductName]
     }
     define view![ItemView] as
 select from transaction.poitems{
+            // key PARENT_KEY.NODE_KEY as OrderId,  // Added primary key
+            // // key PO_ITEM_POS as ItemPosition,     // Added composite key
     PARENT_KEY.PARTNER_GUID.NODE_KEY AS![VendorId],
     PRODUCT_GUID.NODE_KEY as![ProductId],
     CURRENCY as![Currency],

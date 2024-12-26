@@ -6,7 +6,10 @@ service CatalogService @(path:'catalogService'){
     entity AddressSet as projection on master.address;
     entity EmployeeSet as projection on master.employees;
     entity ProductSet as projection on master.product;
-    entity POs as projection on transaction.purchaseorder{
+    entity POs @(
+
+        odata.draft.enabled:true
+    )as projection on transaction.purchaseorder{
          *,
   case OVERALL_STATUS
      when 'N'then 'New'
