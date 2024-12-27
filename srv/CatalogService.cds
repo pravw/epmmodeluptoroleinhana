@@ -25,6 +25,10 @@ when 'A'then 3
 when 'D'then 3 end as colorCoding: Integer,Items
     }
     actions{
+        @cds.odata.bindingparameter.name:'_varibe'
+        @Common.SideEffects:{
+            TargetProperties:['_varibe/GROSS_AMOUNT']
+        }
     action boost() returns  POs;
      function largestOrder() returns POs;
 

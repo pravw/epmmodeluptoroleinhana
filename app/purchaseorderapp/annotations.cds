@@ -256,6 +256,7 @@ annotate service.POs with @(
       },
    ], },
    
+<<<<<<< HEAD
    
    
    
@@ -264,6 +265,141 @@ annotate service.POs with @(
    );
 
 
+=======
+
+   );
+
+
+   
+//linking the help with po
+annotate service.POs with{
+PARTNER_GUID@(
+Common.Text: PARTNER_GUID.COMPANY_NAME,
+Common.ValueList.entity: service.BusinessPartnerSet
+);
+
+} ;
+
+//linking the help with po
+annotate service.POItems with{
+PRODUCT_GUID@(
+Common.Text: PRODUCT_GUID.DESCRIPTION,
+Common.ValueList.entity:service.ProductSet
+);
+
+} ;
+
+
+
+
+
+
+
+
+
+
+// creation of drop down list for a feild in table
+@cds.odata.valuelist 
+annotate service.BusinessPartnerSet with @(
+   UI.Identification: [
+      {
+   $Type: 'UI.DataField'   , 
+   Value: COMPANY_NAME,
+
+}
+
+]
+
+);
+
+// creation of drop down list for a feild in table
+@cds.odata.valuelist
+annotate service.ProductSet with @(
+   UI.Identification: [
+      {
+   $Type: 'UI.DataField' ,
+   Value: DESCRIPTION,
+
+}
+
+]
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 24529fb1cba410bab173538cde9954735b9429cf
 
 
 
