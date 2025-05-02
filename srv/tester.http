@@ -1,6 +1,10 @@
 ###get the service document
 http://localhost:4004/odata/v4/catalogService
 
+
+
+
+
 ### service metadata document
 http://localhost:4004/odata/v4/catalogService/$metadata
 
@@ -78,6 +82,11 @@ DELETE  http://localhost:4004/odata/v4/catalogService/EmployeeSet/fe48a312-e1df-
 
 
 
+
+
+
+
+
 ### to get all pos
 http://localhost:4004/odata/v4/catalogService/POs
 
@@ -108,3 +117,11 @@ GET http://localhost:4004/odata/v4/CatalogService/POs/02BD2137-0890-1EEA-A6C2-BB
 ### complete custom entity which has structure from db but own logic by our own handling
 
 GET http://localhost:4004/odata/v4/MyService/ReadEmployeeSrv
+
+
+
+
+
+### testing security
+GET http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Authorization: Basic guru:

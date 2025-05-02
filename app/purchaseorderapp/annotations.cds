@@ -256,18 +256,10 @@ annotate service.POs with @(
       },
    ], },
    
-<<<<<<< HEAD
-   
-   
-   
-   
-   
-   );
+  );
 
 
-=======
 
-   );
 
 
    
@@ -399,7 +391,6 @@ annotate service.ProductSet with @(
 
 
 
->>>>>>> 24529fb1cba410bab173538cde9954735b9429cf
 
 
 

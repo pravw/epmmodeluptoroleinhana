@@ -1,8 +1,6 @@
 {
   "version": "0.2.0",
   "configurations": [
-
-
     {
       "name": "nodepravencap debug",
       "request": "launch",
@@ -17,7 +15,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "command":"cds watch"
+      "command": "cds watch"
     }
   ]
 }
