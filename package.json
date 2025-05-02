@@ -56,7 +56,7 @@
               ],
               "userAttributes": {
                 "BankName": [
-                  "$UNRESTRICTED"
+                  "My Bank of San Francisco","My Bank of London"
                 ]
               }
             }

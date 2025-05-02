@@ -124,4 +124,4 @@ GET http://localhost:4004/odata/v4/MyService/ReadEmployeeSrv
 
 ### testing security
 GET http://localhost:4004/odata/v4/CatalogService/EmployeeSet
-Authorization: Basic guru:
+Authorization: Basic ananya:
