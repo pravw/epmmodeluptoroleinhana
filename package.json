@@ -21,11 +21,11 @@
     "@sap/hdi-deploy": "^5.4.2"
   },
   "scripts": {
-    "start": "cds-serve",
+    "start": "node node_modules/@sap/approuter/approuter.js",
     "watch-purchaseorderapp": "cds watch --open purchaseorderapp/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "sapux": [
-    "app/purchaseorderapp"
+    "app/purchaseorderapp" 
   ],
   "cds": {
     "requires": {
